@@ -1,0 +1,73 @@
+#include <iostream>
+#include <iomanip> //setw(): 칸 띄우고 정렬
+#include <locale>
+using namespace std;
+
+//행렬(table)
+int main() {
+  int row = 1, col = 1; //열, 행
+  while(row<=5) {
+    col = 1;
+    while(col<=5) {
+      int val = row * col; //row*col을 element로
+      
+      int val = (row > col ? row : col); //row가 크면 row 반환 col이 크면 col 반환
+      
+      int val = 0;
+      if(row==col)
+        val = 1; // 대각행렬
+      
+      cout << setw(4) << val;
+      col++;
+    }
+    cout << endl;
+    row++;
+  }
+}
+--------------------------------------------------
+//while 반복문
+int main() {
+  int sum = 0;
+  int n;
+  int i = 1;
+  cin >> n;
+  cout.imbue(locale(",")); // 숫자 3개씩 묶고 ,찍기
+  while(i<=n) {
+    sum += i; // sum = sum + i
+    cout << setw(4) << i << setw(10) << sum << endl;
+    i++;
+  }
+  return 0;
+}
+-----------------------------------------------
+//if 조건문
+int main() {
+  int score;
+  char grade;
+  cout << "Enter the score [0,100]: ";
+  cin >> grade;
+  if(score>=0 && score<=100) { //&&: and 하나이상이 false면 false 
+    if(score>=90)
+      grade = 'A';
+    else if(score>=80)
+      grade = 'B';
+    else if(score>=70)
+      grade = 'C';
+    else
+      grade = 'F';
+    cout << "Grade is " << grade << endl;
+  else 
+    cout << "Invalid range" << grade << endl;
+  return 0;
+}
+--------------------------------------------------------
+//bool: 참, 거짓만 다루는 타입(바이너리)
+// false=0, 그 외는 true
+int main() {
+  bool a = false;
+  bool b = 10 <= 5;
+  bool c = -1;
+  cout << a << '\t' << b << '\t' << c << endl; // 출력: false false true
+  return 0;
+}
+  
