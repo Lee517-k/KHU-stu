@@ -1,0 +1,48 @@
+#include <iostream>
+using naemspace std;
+
+int main(){
+  int x,y; //선언
+  x = 10; //할당 assign operator (=)
+  y = 20;
+  cout << x << endl; //cout: 변수를 화면에 출력
+  cout << y << endl; //endl 줄바꿈 문자 (개행문자)
+                     //주석 (comment)
+                     /* */ 여러줄 주석
+}
+//ctrl + F5 = build
+
+//short, long, unsigned 쓰면 type은 생략 가능하다
+int main() {
+  unsigned short int siX;
+  unsigned int iX;
+  unsigned long int liX;
+  unsigned long long int lliX;
+  
+  cout << sizeof(siX) << endl; //sizeof : 변수의 바이트 크기를 return
+  cout << size0f(iX) << endl;
+  cout << sizeof(liX) << endl;
+  cout << sizeof(lliX) << endl;
+}
+
+int main() {
+  const double PI = 3.14; //const: 값이 변하지 않음을 의미
+  
+  char ch1 = 'A'; //선언과 할당을 동시에 : 초기화
+  char ch2 = 65 + 32; 
+  cout << ch1 << endl;
+  cout << ch2 << endl; // ASCII코드에서 65는 A 65+32=97은 a 
+                       // ch2의 데이터 타입을 char(문자)로 지정했기에 가능
+}                       
+                       
+int main() {
+  int x, y, sum, mult, div;
+  cin >> x >> y; // 키보드로 해당변수의 값을 입력받음
+  sum = x + y;
+  mult = x * y;
+  div = x / y;
+  cout << x << '\t' << y << endl; // \t : tab(칸 띄우기) 출력
+  cout << "x+y=" << sum << endl;
+  cout << "x*y=" << mult << endl;
+  cout << "x/y=" << div << endl;
+}  
