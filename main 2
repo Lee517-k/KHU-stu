@@ -1,0 +1,55 @@
+#include <iostream> // cin, cout 함수 헤더
+#include <cmath> // 수학 함수들 헤더
+using namespace std; // library의 이름이 같은 함수를 식별하기 위해
+
+void applePrice (int n = 1000) { // default argument: 다른 값을 설정하지 않는 이상 선언에서 할당한 값을 사용
+  cout << "Apple price =" << n << endl;
+}
+
+int main() {
+  applePrice(1500); // 출력: 1500
+  applePrice(); // 출력: 1000
+  return 0;
+}  
+-----------------------------------------------------------------------------------------------------------------
+int main() {
+  double val;
+  val = 5;
+  cout << sqrt(val) << endl; // cmath::sqrt() : 제곱근
+  cout << exp(val) << endl; // cmath::exp() : e의 val 제곱 값
+  cout << log(val) << endl; // cmath::log() : 자연제곱근 반환
+  cout << cos(val) << endl; // cmath::cos() : 입력된 라디안 값의 코사인 값 반환
+  return 0;
+}  
+-----------------------------------------------------------------------------------------------------------------
+// 선언부
+int get_data();
+int sum(int a, int b);
+int subt(int a, int b);
+int mult(int a, int b);
+float div(int a, int b);
+
+int main() {
+  int x, y;
+  x = get_data();
+  y = get_data();
+  cout << "x=" << x << "y=" << endl;
+  cout << "x+y=" << sum(x,y) << endl;
+  cout << "x-y=" << subt(x,y) << endl;
+  cout << "x*y=" << mult(x,y) << endl;
+  cout << "x/y=" << div(x,y) << endl;  
+}
+
+// 구현부
+int get_data() {
+  int a;
+  cout << "Enter a number";
+  cin >> a;
+}
+int sum(int a, int b) { return a + b; }
+int subt(int a, int b) { return a - b; }
+int mult(int a, int b) { return a * b; }
+float dic(int a, int b) { return a / b; }
+
+// 형변환: (float)a, float(a), 1.0*a
+  
