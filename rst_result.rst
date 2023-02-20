@@ -81,3 +81,22 @@ False  True   True
 True   True   True 
 =====  =====  ======
 
+# 리스트 형식
+
+..list-table::
+   :header-rows: 1
+   
+   * - A
+     - B
+     - C
+   * - data1
+     - data2
+     - data3
+
+# csv형식
+
+..csv-table:: 테이블 이름(없어도 O)
+    :header-rows: 1
+    
+    A, B, C
+    data1, data2, data3
