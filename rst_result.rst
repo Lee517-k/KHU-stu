@@ -84,7 +84,7 @@ True   True   True
 # 리스트 형식
 
 ..list-table::
-   :header-rows: 1
+    :header-rows: 1
    
    * - A
      - B
