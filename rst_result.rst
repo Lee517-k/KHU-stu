@@ -83,7 +83,7 @@ True   True   True
 
 # 리스트 형식
 
-..list-table::
+.. list-table::
     :header-rows: 1
    
    * - A
@@ -95,7 +95,7 @@ True   True   True
 
 # csv형식
 
-..csv-table:: 테이블 이름(없어도 O)
+.. csv-table:: 테이블 이름(없어도 O)
     :header-rows: 1
     
     A, B, C
