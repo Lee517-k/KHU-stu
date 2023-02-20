@@ -1,0 +1,45 @@
+===========================
+ 영상 입출력과 디스플레이
+===========================
+
+아래의 표는 영상을 입출력하고 디스플레이하는 함수이다.
+
+.. list-table::
+    
+    * - cv2.imread(filename[, flags])
+      - 영상입력
+    * - cv2.imwrite(filename, img[, params])
+      - 영상 파일 출력
+    * - cv2.namedWindow(winname[, flags])
+      - 윈도우 생성
+    * - cv2.imshow(winname, mat)
+      - 윈도우 표시
+    * - cv2.waitKey([,delay])
+      - 키보드 입력 대기
+    * - cv2.destroyWindow(winname)
+      - 윈도우 파괴
+    * - cv2.destroyAllWindows()
+      - 모든 윈도우 파괴
+      
+영상 파일을 읽어서 화면에 표시하는 구문은 다음과 같다.
+
+opencv를 import하고 원하는 이미지를 가져온다.
+
+.. code::
+
+    import cv2
+    imgfile='경로/경로/이미지이름.jpg'
+    
+가져온 이미지를 읽고 화면에 표시한다.
+
+컬러를 기본으로 하며 흑백으로 표시도 가능하다.
+
+.. code::
+
+    img=cv2.imread(imgfile)
+    imgG=cv2.imread(imgfile,0)
+    
+    cv2.imshow('color',img)
+    cv2.imshow('grayscale',imgG)
+    
+    
