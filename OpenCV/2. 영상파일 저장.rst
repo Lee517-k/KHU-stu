@@ -1,0 +1,29 @@
+=================
+ 영상파일 저장
+=================
+
+openCV를 import하고 사진을 읽어온다.
+
+.. code::
+
+  import cv2
+  
+  imgFile = '경로/이미지.jpg'
+  img = cv2.imread(imgFile)
+  
+가져온 사진을 원하는 경로에 bmp, png, jpg 등의 타입으로 저장가능하다.  
+
+png 영상을 저장할 땐 압축률 설정이 가능하다.
+
+    압축률은 [0,9]이고 압축률과 걸리는 시간은 비례한다. 기본값은 3이다.
+  
+jpeg 영상을 저장할 땐 품질 설정이 가능하다.
+
+    품질은 [0,100]이고 품질이 클 수록 영상의 품질이 좋아진다. 기본값은 95이다.
+  
+.. code::
+
+  cv2.imwrite('경로/이미지.bmp', img)
+  cv2.imwrite('경로/이미지.png', img)
+  cv2.imwrite('경로/이미지.png', img, [cv2.IMWRITE_PNG_COMPRESSION, 9])
+  cv2.imwrite('경로/이미지.jpg', img, [cv2.IMSRITE_JPEG_QUALITY, 90])
